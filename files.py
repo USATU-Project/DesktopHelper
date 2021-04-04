@@ -10,8 +10,13 @@ class Files (Enum):
     App = ["exe", "msi", "sh", "bat"]
     
 class File:
-    def SearchFile():
+    def SearchFile(file):
         for i in Files:
-            tmp = i
-            
-File.SearchFile()
+            for j in i.value:
+                if (file == j):
+                    print(file+" "+i.name)
+                    break
+            if(Files.App == i):
+                print(file+" Oth")
+
+File.SearchFile("iso")
