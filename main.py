@@ -3,17 +3,15 @@ import os
 
 from PyQt5 import QtWidgets
 
-import design
+from ui import folderselect
+from ui import settings
 
-class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
+class MainApp(QtWidgets.QMainWindow, folderselect.Ui_MainWindow):
     dir1 = os.getcwd()
     dir2 = os.getcwd()
     def __init__(self):
         super().__init__()
         self.setupUi(self) 
-        self.pushButton.clicked.connect(self.browse_folder1)
-        self.pushButton_2.clicked.connect(self.browse_folder2) 
-        self.pushButton_3.clicked.connect(self.accept) 
 
     def browse_folder1(self):
         directory1 = QtWidgets.QFileDialog.getExistingDirectory(self, "Выберите папку")
@@ -22,14 +20,6 @@ class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
             self.listWidget.clear()
             self.dir1 = directory1
             self.listWidget.addItem("Текущая директория: "+directory1)
-
-    def browse_folder2(self):
-        directory2 = QtWidgets.QFileDialog.getExistingDirectory(self, "Выберите папку")
-
-        if directory2:
-            self.listWidget_2.clear()
-            self.dir2 = directory2
-            self.listWidget_2.addItem("Текущая директория: "+directory2)
 
     def accept(self):
         lst = os.listdir(self.dir1)
@@ -54,7 +44,7 @@ class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
 
 def main():
     app = QtWidgets.QApplication(sys.argv)
-    window = ExampleApp()
+    window = MainApp()
     window.show()
     app.exec_()
 
