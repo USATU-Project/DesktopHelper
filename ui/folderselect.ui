@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>448</width>
-    <height>464</height>
+    <width>530</width>
+    <height>400</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -45,26 +45,31 @@
      </widget>
     </item>
     <item>
-     <widget class="QTextEdit" name="music_folder">
-      <property name="minimumSize">
-       <size>
-        <width>389</width>
-        <height>27</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QCheckBox" name="music_def">
-      <property name="font">
-       <font>
-        <family>Helvetica</family>
-       </font>
-      </property>
-      <property name="text">
-       <string>по умолчанию</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QTextEdit" name="music_folder">
+        <property name="minimumSize">
+         <size>
+          <width>330</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>12235234</width>
+          <height>27</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>PushButton</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
      <widget class="QLabel" name="label_3">
@@ -80,26 +85,31 @@
      </widget>
     </item>
     <item>
-     <widget class="QTextEdit" name="video_folder">
-      <property name="minimumSize">
-       <size>
-        <width>389</width>
-        <height>27</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QCheckBox" name="video_def">
-      <property name="font">
-       <font>
-        <family>Helvetica</family>
-       </font>
-      </property>
-      <property name="text">
-       <string>по умолчанию</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QTextEdit" name="video_folder">
+        <property name="minimumSize">
+         <size>
+          <width>330</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>124145</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>PushButton</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
      <widget class="QLabel" name="label_4">
@@ -115,29 +125,31 @@
      </widget>
     </item>
     <item>
-     <widget class="QTextEdit" name="photo_folder">
-      <property name="minimumSize">
-       <size>
-        <width>389</width>
-        <height>27</height>
-       </size>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QCheckBox" name="photo_def">
-      <property name="font">
-       <font>
-        <family>Helvetica</family>
-       </font>
-      </property>
-      <property name="text">
-       <string>по умолчанию</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QTextEdit" name="video_folder_2">
+        <property name="minimumSize">
+         <size>
+          <width>389</width>
+          <height>27</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>124142</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="text">
+         <string>PushButton</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
      <widget class="QLabel" name="label_5">
@@ -153,26 +165,31 @@
      </widget>
     </item>
     <item>
-     <widget class="QTextEdit" name="other_folder">
-      <property name="minimumSize">
-       <size>
-        <width>389</width>
-        <height>27</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QCheckBox" name="other_def">
-      <property name="font">
-       <font>
-        <family>Helvetica</family>
-       </font>
-      </property>
-      <property name="text">
-       <string>по умолчанию</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QTextEdit" name="video_folder_3">
+        <property name="minimumSize">
+         <size>
+          <width>389</width>
+          <height>27</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>25235</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="text">
+         <string>PushButton</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
      <widget class="QCheckBox" name="date_sort">
@@ -187,18 +204,22 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="accept_button">
-      <property name="text">
-       <string>Применить</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="cancel_button">
-      <property name="text">
-       <string>Отмена</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QPushButton" name="cancel_button">
+        <property name="text">
+         <string>Отмена</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="accept_button">
+        <property name="text">
+         <string>Применить</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
