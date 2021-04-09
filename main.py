@@ -6,7 +6,9 @@ from PyQt5 import QtWidgets
 from ui import folderselect
 from ui import settings
 
-class MainApp(QtWidgets.QMainWindow, folderselect.Ui_MainWindow):
+from files import *
+
+class MainApp(QtWidgets.QMainWindow, settings.Ui_MainWindow):
     dir1 = os.getcwd()
     dir2 = os.getcwd()
     def __init__(self):
@@ -39,8 +41,6 @@ class MainApp(QtWidgets.QMainWindow, folderselect.Ui_MainWindow):
                 os.replace(self.dir1+"/"+i,self.dir2+"/Picters/"+i)
             elif a[1] == "webm":
                 os.replace(self.dir1+"/"+i,self.dir2+"/Video/"+i)         
-
-          
 
 def main():
     app = QtWidgets.QApplication(sys.argv)
