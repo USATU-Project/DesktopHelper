@@ -94,7 +94,7 @@
            </font>
           </property>
           <property name="text">
-           <string>Принять</string>
+           <string>Применить</string>
           </property>
          </widget>
         </item>
