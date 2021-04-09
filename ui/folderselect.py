@@ -73,5 +73,5 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.select_button.setText(_translate("MainWindow", "Выбрать"))
         self.settings_button.setText(_translate("MainWindow", "Настройки"))
-        self.accept_button.setText(_translate("MainWindow", "Принять"))
+        self.accept_button.setText(_translate("MainWindow", "Применить"))
         self.cancel_button.setText(_translate("MainWindow", "Отмена"))

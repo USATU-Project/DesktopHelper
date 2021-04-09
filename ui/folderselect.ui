@@ -206,16 +206,16 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_5">
       <item>
-       <widget class="QPushButton" name="cancel_button">
+       <widget class="QPushButton" name="accept_button">
         <property name="text">
-         <string>Отмена</string>
+         <string>Применить</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="accept_button">
+       <widget class="QPushButton" name="cancel_button">
         <property name="text">
-         <string>Применить</string>
+         <string>Отмена</string>
         </property>
        </widget>
       </item>

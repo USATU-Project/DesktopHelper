@@ -87,18 +87,6 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
-         <widget class="QPushButton" name="cancel_button">
-          <property name="font">
-           <font>
-            <family>Helvetica</family>
-           </font>
-          </property>
-          <property name="text">
-           <string>Отмена</string>
-          </property>
-         </widget>
-        </item>
-        <item>
          <widget class="QPushButton" name="accept_button">
           <property name="font">
            <font>
@@ -107,6 +95,18 @@
           </property>
           <property name="text">
            <string>Применить</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="cancel_button">
+          <property name="font">
+           <font>
+            <family>Helvetica</family>
+           </font>
+          </property>
+          <property name="text">
+           <string>Отмена</string>
           </property>
          </widget>
         </item>
