@@ -63,7 +63,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="music_button">
         <property name="text">
          <string>PushButton</string>
         </property>
@@ -103,7 +103,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="video_button">
         <property name="text">
          <string>PushButton</string>
         </property>
@@ -127,7 +127,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
-       <widget class="QTextEdit" name="video_folder_2">
+       <widget class="QTextEdit" name="photo_folder">
         <property name="minimumSize">
          <size>
           <width>389</width>
@@ -143,7 +143,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="photo_button">
         <property name="text">
          <string>PushButton</string>
         </property>
@@ -167,7 +167,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_4">
       <item>
-       <widget class="QTextEdit" name="video_folder_3">
+       <widget class="QTextEdit" name="other_folder">
         <property name="minimumSize">
          <size>
           <width>389</width>
@@ -183,7 +183,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_4">
+       <widget class="QPushButton" name="other_button">
         <property name="text">
          <string>PushButton</string>
         </property>
