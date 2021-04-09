@@ -13,10 +13,4 @@ class File:
     def SearchFile(file):
         for i in Files:
             for j in i.value:
-                if (file == j):
-                    print(file+" "+i.name)
-                    break
-            if(Files.App == i):
-                print(file+" Oth")
-
-File.SearchFile("iso")
+                print(" ")

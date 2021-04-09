@@ -6,41 +6,30 @@ from PyQt5 import QtWidgets
 from ui import folderselect
 from ui import settings
 
-from files import *
+def_dir = os.getcwd()
 
-class MainApp(QtWidgets.QMainWindow, settings.Ui_MainWindow):
-    dir1 = os.getcwd()
-    dir2 = os.getcwd()
+
+class MainApp(QtWidgets.QMainWindow, folderselect.Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        self.setupUi(self) 
+        self.setupUi(self)
+        self.settings_button.clicked.connect(self.settings_window)
+        self.select_button.clicked.connect(self.fold_sel)
 
-    def browse_folder1(self):
-        directory1 = QtWidgets.QFileDialog.getExistingDirectory(self, "Выберите папку")
+    def settings_window(self):
+        self.w2 = Settings()
+        self.w2.show()
+        
+    def fold_sel(self):
+        directory = QtWidgets.QFileDialog.getExistingDirectory(self, "Выберите папку...")
+        global def_dir
+        def_dir = directory
+        self.folder_select.setText(directory)
 
-        if directory1:
-            self.listWidget.clear()
-            self.dir1 = directory1
-            self.listWidget.addItem("Текущая директория: "+directory1)
-
-    def accept(self):
-        lst = os.listdir(self.dir1)
-        for i in lst:
-            a = i.split('.')
-            if len(a) < 2:
-                continue
-            if a[1] == "jpg" and not os.path.exists(self.dir2+"/Picters"):
-                os.mkdir(self.dir2+"/Picters")
-            elif a[1] == "webm" and not os.path.exists(self.dir2+"/Video"):
-                os.mkdir(self.dir2+"/Video")
-
-        for i in lst:
-            if len(a) < 2:
-                continue
-            if a[1] == "jpg":
-                os.replace(self.dir1+"/"+i,self.dir2+"/Picters/"+i)
-            elif a[1] == "webm":
-                os.replace(self.dir1+"/"+i,self.dir2+"/Video/"+i)         
+class Settings(QtWidgets.QMainWindow, settings.Ui_MainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
 
 def main():
     app = QtWidgets.QApplication(sys.argv)
