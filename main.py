@@ -116,7 +116,7 @@ class LogWindow(QMainWindow, logs.Ui_MainWindow):
                             os.replace(def_dir+"/"+i,dir_oth+"/Arc/"+i)
                             self.logs_list.addItem(dir_oth+"/Arc/"+i)
                             break
-                        else
+                        else:
                             os.replace(def_dir+"/"+i,dir_oth+"/App/"+i)
                             self.logs_list.addItem(dir_oth+"/App/"+i)
                             break
