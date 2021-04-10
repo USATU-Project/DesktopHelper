@@ -95,7 +95,7 @@ class LogWindow(QMainWindow, logs.Ui_MainWindow):
                 continue    
             for j in files.Files:
                 for k in j.value:
-                    if (file_ext == k):
+                    if (file_ext == "."+k):
                         if (j.name == "pho"):
                             os.replace(def_dir+"/"+i,dir_pho+"/"+i)
                             self.logs_list.addItem(dir_pho+"/"+i)
