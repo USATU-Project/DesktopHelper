@@ -125,9 +125,9 @@ class LogWindow(QMainWindow, logs.Ui_MainWindow):
                             os.replace(def_dir+"/"+i,dir_oth+"/App/"+i)
                             self.logs_list.addItem(dir_oth+"/App/"+i)
                             break
-              if os.path.isfile(def_dir+"/"+i):
-                  os.replace(def_dir+"/"+i, dir_oth+"/"+i)
-                  self.logs_list.addItem(dir_oth+"/"+i)
+            if os.path.isfile(def_dir+"/"+i):
+                os.replace(def_dir+"/"+i, dir_oth+"/"+i)
+                self.logs_list.addItem(dir_oth+"/"+i)
 
 def main():
     app = QApplication(sys.argv)
