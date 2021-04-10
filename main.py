@@ -100,30 +100,35 @@ class LogWindow(QMainWindow, logs.Ui_MainWindow):
                             os.replace(def_dir+"/"+i,dir_pho+"/"+i)
                             self.logs_list.addItem(dir_pho+"/"+i)
                             break
+
                         elif (j.name == "vid"):
                             os.replace(def_dir+"/"+i,dir_vid+"/"+i)
                             self.logs_list.addItem(dir_vid+"/"+i)
                             break
+
                         elif (j.name == "mus"):
                             os.replace(def_dir+"/"+i,dir_mus+"/"+i)
                             self.logs_list.addItem(dir_mus+"/"+i)
                             break
+
                         elif (j.name == "doc"):
                             os.replace(def_dir+"/"+i,dir_oth+"/Doc/"+i)
                             self.logs_list.addItem(dir_oth+"/Doc/"+i)
                             break
+
                         elif (j.name == "arc"):
                             os.replace(def_dir+"/"+i,dir_oth+"/Arc/"+i)
                             self.logs_list.addItem(dir_oth+"/Arc/"+i)
                             break
+
                         else:
                             os.replace(def_dir+"/"+i,dir_oth+"/App/"+i)
                             self.logs_list.addItem(dir_oth+"/App/"+i)
                             break
+              if os.path.isfile(def_dir+"/"+i):
+                  os.replace(def_dir+"/"+i, dir_oth+"/"+i)
+                  self.logs_list.addItem(dir_oth+"/"+i)
 
-                if os.path.isfile(def_dir+"/"+i):
-                    os.replace(def_dir+"/"+i,dir_oth+"/"+i)
-                    self.logs_list.addItem(dir_oth+"/"+i)
 def main():
     app = QApplication(sys.argv)
     window = MainApp()
