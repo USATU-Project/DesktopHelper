@@ -87,15 +87,15 @@ class LogWindow(QMainWindow, logs.Ui_MainWindow):
     def Sort(self):
         list_file = os.listdir(def_dir)
         for i in list_file:
-            tmp = i.split('.')
-            if not os.path.isfile(def_dir+"/"+i):
+            filename, file_ext = os.path.splitext(i)
+            if os.path.isdir(def_dir+"/"+i):
                 if def_dir+"/"+i != dir_pho and def_dir+"/"+i != dir_vid and def_dir+"/"+i != dir_mus and def_dir+"/"+i != dir_oth:
                     os.replace(def_dir+"/"+i,dir_oth+"/"+i)
                     self.logs_list.addItem(dir_oth+"/"+i)
-                continue
+                continue    
             for j in files.Files:
                 for k in j.value:
-                    if (tmp[1] == k):
+                    if (file_ext == k):
                         if (j.name == "pho"):
                             os.replace(def_dir+"/"+i,dir_pho+"/"+i)
                             self.logs_list.addItem(dir_pho+"/"+i)
