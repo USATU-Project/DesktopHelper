@@ -123,16 +123,16 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "DesktopHelper[Settings]"))
         self.label.setText(_translate("MainWindow", "Настроить папку расположения"))
         self.label_2.setText(_translate("MainWindow", "Музыка"))
-        self.music_button.setText(_translate("MainWindow", "PushButton"))
+        self.music_button.setText(_translate("MainWindow", "Выбрать"))
         self.label_3.setText(_translate("MainWindow", "Видео"))
-        self.video_button.setText(_translate("MainWindow", "PushButton"))
+        self.video_button.setText(_translate("MainWindow", "Выбрать"))
         self.label_4.setText(_translate("MainWindow", "Фото"))
-        self.photo_button.setText(_translate("MainWindow", "PushButton"))
+        self.photo_button.setText(_translate("MainWindow", "Выбрать"))
         self.label_5.setText(_translate("MainWindow", "Остальное"))
-        self.other_button.setText(_translate("MainWindow", "PushButton"))
+        self.other_button.setText(_translate("MainWindow", "Выбрать"))
         self.date_sort.setText(_translate("MainWindow", "Сортировка по дате"))
         self.accept_button.setText(_translate("MainWindow", "Применить"))
         self.cancel_button.setText(_translate("MainWindow", "Отмена"))

@@ -43,5 +43,5 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.cancel_button.setText(_translate("MainWindow", "Отмена"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "DesktopHelper[Logs]"))
+        self.cancel_button.setText(_translate("MainWindow", "Готово"))
