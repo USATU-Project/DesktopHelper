@@ -88,7 +88,7 @@ class LogWindow(QMainWindow, logs.Ui_MainWindow):
         list_file = os.listdir(def_dir)
         for i in list_file:
             tmp = i.split('.')
-            if os.path.isdir(def_dir+"/"+i):
+            if not os.path.isfile(def_dir+"/"+i):
                 if def_dir+"/"+i != dir_pho and def_dir+"/"+i != dir_vid and def_dir+"/"+i != dir_mus and def_dir+"/"+i != dir_oth:
                     os.replace(def_dir+"/"+i,dir_oth+"/"+i)
                     self.logs_list.addItem(dir_oth+"/"+i)
