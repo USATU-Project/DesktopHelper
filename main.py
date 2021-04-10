@@ -66,9 +66,33 @@ class Settings(QMainWindow, settings.Ui_MainWindow):
         self.photo_folder.setText(def_dir+"/Photo")
         self.video_folder.setText(def_dir+"/Video")
         self.other_folder.setText(def_dir+"/Other")
+        self.other_button.clicked.connect(self.fold_sel_oth)
+        self.video_button.clicked.connect(self.fold_sel_vid)
+        self.music_button.clicked.connect(self.fold_sel_mus)
+        self.photo_button.clicked.connect(self.fold_sel_pho)
         self.cancel_button.clicked.connect(self.close)
         self.accept_button.clicked.connect(self.accept_but)
     
+    def fold_sel_mus(self):
+        directory = QFileDialog.getExistingDirectory(self, "Выберите папку...")
+        if (directory != ""):
+            self.music_folder.setText(directory)
+
+    def fold_sel_vid(self):
+        directory = QFileDialog.getExistingDirectory(self, "Выберите папку...")
+        if (directory != ""):
+            self.video_folder.setText(directory)
+    
+    def fold_sel_pho(self):
+        directory = QFileDialog.getExistingDirectory(self, "Выберите папку...")
+        if (directory != ""):
+            self.photo_folder.setText(directory)
+
+    def fold_sel_oth(self):
+        directory = QFileDialog.getExistingDirectory(self, "Выберите папку...")
+        if (directory != ""):
+            self.other_folder.setText(directory)
+
     def accept_but(self):
         global dir_mus, dir_vid, dir_pho, dir_oth, set_dir
         dir_mus = self.music_folder.toPlainText()
