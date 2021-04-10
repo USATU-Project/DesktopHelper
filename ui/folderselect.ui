@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>DesktopHelper[Settings]</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -65,7 +65,7 @@
       <item>
        <widget class="QPushButton" name="music_button">
         <property name="text">
-         <string>PushButton</string>
+         <string>Выбрать</string>
         </property>
        </widget>
       </item>
@@ -105,7 +105,7 @@
       <item>
        <widget class="QPushButton" name="video_button">
         <property name="text">
-         <string>PushButton</string>
+         <string>Выбрать</string>
         </property>
        </widget>
       </item>
@@ -145,7 +145,7 @@
       <item>
        <widget class="QPushButton" name="photo_button">
         <property name="text">
-         <string>PushButton</string>
+         <string>Выбрать</string>
         </property>
        </widget>
       </item>
@@ -185,7 +185,7 @@
       <item>
        <widget class="QPushButton" name="other_button">
         <property name="text">
-         <string>PushButton</string>
+         <string>Выбрать</string>
         </property>
        </widget>
       </item>
