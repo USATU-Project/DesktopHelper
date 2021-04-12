@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>530</width>
-    <height>400</height>
+    <width>514</width>
+    <height>382</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -190,18 +190,6 @@
        </widget>
       </item>
      </layout>
-    </item>
-    <item>
-     <widget class="QCheckBox" name="date_sort">
-      <property name="font">
-       <font>
-        <family>Helvetica</family>
-       </font>
-      </property>
-      <property name="text">
-       <string>Сортировка по дате</string>
-      </property>
-     </widget>
     </item>
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_5">
