@@ -39,10 +39,6 @@ class MainApp(QMainWindow, folderselect.Ui_MainWindow):
         directory = self.folder_select.toPlainText()
         def_dir = directory
 
-    def make_fol(self, path):
-        if not os.path.isdir(path):
-            os.mkdir(path)
-
     def accept_but(self):
         self.set_dir()
         if not set_dir:
@@ -52,8 +48,6 @@ class MainApp(QMainWindow, folderselect.Ui_MainWindow):
             dir_pho = def_dir+"/Photo"
             dir_vid = def_dir+"/Video"
             
-        for i in [dir_mus, dir_oth, dir_pho, dir_vid, dir_oth+"/Arc", dir_oth+"/App", dir_oth+"/Doc"]:
-            self.make_fol(i)
         self.w3 = LogWindow()
         self.w3.show()
         self.close()
@@ -108,12 +102,19 @@ class LogWindow(QMainWindow, logs.Ui_MainWindow):
         self.setupUi(self)
         self.Sort()
         self.cancel_button.clicked.connect(QCoreApplication.instance().quit)
+
+    def make_fold(self,path):
+        if not os.path.isdir(path):
+            os.mkdir(path)
+
     def Sort(self):
         list_file = os.listdir(def_dir)
         for i in list_file:
             filename, file_ext = os.path.splitext(i)
+            file_ext = file_ext.lower()
             if os.path.isdir(i):
                 if def_dir+"/"+i != dir_pho and def_dir+"/"+i != dir_vid and def_dir+"/"+i != dir_mus and def_dir+"/"+i != dir_oth:
+                    self.make_fold(def_dir)
                     os.replace(def_dir+"/"+i,dir_oth+"/"+i)
                     self.logs_list.addItem(dir_oth+"/"+i)
                 continue    
@@ -121,35 +122,42 @@ class LogWindow(QMainWindow, logs.Ui_MainWindow):
                 for k in j.value:
                     if (file_ext == "."+k):
                         if (j.name == "pho"):
+                            self.make_fold(dir_pho)
                             os.replace(def_dir+"/"+i,dir_pho+"/"+i)
                             self.logs_list.addItem(dir_pho+"/"+i)
                             break
 
                         elif (j.name == "vid"):
+                            self.make_fold(dir_vid)
                             os.replace(def_dir+"/"+i,dir_vid+"/"+i)
                             self.logs_list.addItem(dir_vid+"/"+i)
                             break
 
                         elif (j.name == "mus"):
+                            self.make_fold(dir_mus)
                             os.replace(def_dir+"/"+i,dir_mus+"/"+i)
                             self.logs_list.addItem(dir_mus+"/"+i)
                             break
 
                         elif (j.name == "doc"):
+                            self.make_fold(dir_oth+"/Doc")
                             os.replace(def_dir+"/"+i,dir_oth+"/Doc/"+i)
                             self.logs_list.addItem(dir_oth+"/Doc/"+i)
                             break
 
                         elif (j.name == "arc"):
+                            self.make_fold(dir_oth+"/Arc")
                             os.replace(def_dir+"/"+i,dir_oth+"/Arc/"+i)
                             self.logs_list.addItem(dir_oth+"/Arc/"+i)
                             break
 
                         else:
+                            self.make_fold(dir_oth+"/App")
                             os.replace(def_dir+"/"+i,dir_oth+"/App/"+i)
                             self.logs_list.addItem(dir_oth+"/App/"+i)
                             break
             if os.path.isfile(def_dir+"/"+i):
+                self.make_fold(dir_oth)
                 os.replace(def_dir+"/"+i, dir_oth+"/"+i)
                 self.logs_list.addItem(dir_oth+"/"+i)
 
