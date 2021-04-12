@@ -113,11 +113,8 @@ class LogWindow(QMainWindow, logs.Ui_MainWindow):
             filename, file_ext = os.path.splitext(i)
             file_ext = file_ext.lower()
             if os.path.isdir(i):
-                if def_dir+"/"+i != dir_pho and def_dir+"/"+i != dir_vid and def_dir+"/"+i != dir_mus and def_dir+"/"+i != dir_oth:
-                    self.make_fold(def_dir)
-                    os.replace(def_dir+"/"+i,dir_oth+"/"+i)
-                    self.logs_list.addItem(dir_oth+"/"+i)
-                continue    
+                continue
+
             for j in files.Files:
                 for k in j.value:
                     if (file_ext == "."+k):
@@ -140,18 +137,21 @@ class LogWindow(QMainWindow, logs.Ui_MainWindow):
                             break
 
                         elif (j.name == "doc"):
+                            self.make_fold(dir_oth)
                             self.make_fold(dir_oth+"/Doc")
                             os.replace(def_dir+"/"+i,dir_oth+"/Doc/"+i)
                             self.logs_list.addItem(dir_oth+"/Doc/"+i)
                             break
 
                         elif (j.name == "arc"):
+                            self.make_fold(dir_oth)
                             self.make_fold(dir_oth+"/Arc")
                             os.replace(def_dir+"/"+i,dir_oth+"/Arc/"+i)
                             self.logs_list.addItem(dir_oth+"/Arc/"+i)
                             break
 
                         else:
+                            self.make_fold(dir_oth)
                             self.make_fold(dir_oth+"/App")
                             os.replace(def_dir+"/"+i,dir_oth+"/App/"+i)
                             self.logs_list.addItem(dir_oth+"/App/"+i)
