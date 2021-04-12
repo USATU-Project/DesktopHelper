@@ -15,8 +15,8 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normalon>../../../Downloads/test.ico</normalon>
-   </iconset>
+    <normaloff>test.ico</normaloff>
+    <normalon>test.ico</normalon>test.ico</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
