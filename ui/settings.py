@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(530, 400)
+        MainWindow.resize(514, 382)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -101,12 +101,6 @@ class Ui_MainWindow(object):
         self.other_button.setObjectName("other_button")
         self.horizontalLayout_4.addWidget(self.other_button)
         self.verticalLayout.addLayout(self.horizontalLayout_4)
-        self.date_sort = QtWidgets.QCheckBox(self.centralwidget)
-        font = QtGui.QFont()
-        font.setFamily("Helvetica")
-        self.date_sort.setFont(font)
-        self.date_sort.setObjectName("date_sort")
-        self.verticalLayout.addWidget(self.date_sort)
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
         self.accept_button = QtWidgets.QPushButton(self.centralwidget)
@@ -133,6 +127,5 @@ class Ui_MainWindow(object):
         self.photo_button.setText(_translate("MainWindow", "Выбрать"))
         self.label_5.setText(_translate("MainWindow", "Остальное"))
         self.other_button.setText(_translate("MainWindow", "Выбрать"))
-        self.date_sort.setText(_translate("MainWindow", "Сортировка по дате"))
         self.accept_button.setText(_translate("MainWindow", "Применить"))
         self.cancel_button.setText(_translate("MainWindow", "Отмена"))
