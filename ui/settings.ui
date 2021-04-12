@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>DesktopHelper</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../Downloads/test.ico</normaloff>../../../Downloads/test.ico</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
